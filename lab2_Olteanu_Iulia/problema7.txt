@@ -1,0 +1,66 @@
+import java.util.Vector;
+import java.lang.String;
+
+public class Problema1 {
+    public static void main(String[] args){
+        Vector v = new Vector();
+        Vector<Integer> v1 = new Vector<>(6);
+        for(int i=0;i<v1.capacity();i++){
+            v1.add(0);
+        }
+        int a;
+        System.out.println(v1);
+        v.add(1);
+        v.add(true);
+        v.add(12.12345);
+        v.add("sir");
+        v.add('c');
+        v.add(10.445654657869);
+        v.add("mvbdsgnj");
+        v.add(false);
+        int b = v.size();
+        System.out.println(b);
+        for(int i=0;i<b;i++){
+            if(v.get(i) instanceof Integer){
+                a= v1.elementAt(0);
+                a++;
+                v1.remove(0);
+                v1.add(0,a);
+            }
+            if(v.get(i) instanceof Double){
+                a= (int) v1.elementAt(1);
+                a++;
+                v1.remove(1);
+                v1.add(1,a);
+            }
+            if(v.get(i) instanceof Float){
+                a= (int) v1.elementAt(2);
+                a++;
+                v1.remove(2);
+                v1.add(2,a);
+            }
+            if(v.get(i) instanceof String){
+                a= (int) v1.elementAt(3);
+                a++;
+                v1.remove(3);
+                v1.add(3,a);
+            }
+            if(v.get(i) instanceof Character){
+                a= (int) v1.elementAt(4);
+                a++;
+                v1.remove(4);
+                v1.add(4,a);
+            }
+            if(v.get(i) instanceof Boolean){
+                a= (int) v1.elementAt(5);
+                a++;
+                v1.remove(5);
+                v1.add(5,a);
+            }
+
+        }
+
+        System.out.println(v1);
+
+    }
+}
